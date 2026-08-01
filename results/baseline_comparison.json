@@ -1,0 +1,70 @@
+{
+  "comparison": [
+    {
+      "method": "Isolation Forest",
+      "accuracy": 0.5284,
+      "precision": 0.562480873202081,
+      "recall": 0.5174063995495918,
+      "f1": 0.5390029325513197,
+      "roc_auc": 0.5291730702660729,
+      "detection_rate": 0.5174063995495433,
+      "false_positive_rate": 0.45906025901739705,
+      "latency_ms": 0.013568926799996462
+    },
+    {
+      "method": "One-Class SVM",
+      "accuracy": 0.5704,
+      "precision": 0.7824897400820794,
+      "recall": 0.26836820868912453,
+      "f1": 0.39966461710452766,
+      "roc_auc": 0.591638883323477,
+      "detection_rate": 0.26836820868909933,
+      "false_positive_rate": 0.0850904420421615,
+      "latency_ms": 0.03714358040000434
+    },
+    {
+      "method": "Local Outlier Factor",
+      "accuracy": 0.6829,
+      "precision": 0.6500869565217391,
+      "recall": 0.8768884301398142,
+      "f1": 0.7466442953020135,
+      "roc_auc": 0.6692587286094555,
+      "detection_rate": 0.8768884301397318,
+      "false_positive_rate": 0.5383709729208457,
+      "latency_ms": 0.04107075450000366
+    },
+    {
+      "method": "Random Forest",
+      "accuracy": 0.9994,
+      "precision": 0.9988752460399287,
+      "recall": 1.0,
+      "f1": 0.9994373065741348,
+      "roc_auc": 0.9999215965723888,
+      "detection_rate": 0.9999999999999061,
+      "false_positive_rate": 0.0012843840308250792,
+      "latency_ms": 0.03344574625000405
+    },
+    {
+      "method": "Gradient Boosting",
+      "accuracy": 0.9992,
+      "precision": 0.999062001688397,
+      "recall": 0.9994369897719808,
+      "f1": 0.99924946054977,
+      "roc_auc": 0.9996405233225164,
+      "detection_rate": 0.999436989771887,
+      "false_positive_rate": 0.001070320025687566,
+      "latency_ms": 0.007921945499992943
+    },
+    {
+      "method": "RCAF-IoT v2 (This Work)",
+      "accuracy": 0.9993,
+      "precision": 0.9990621776235581,
+      "recall": 0.9996246598479872,
+      "f1": 0.9993433395872421,
+      "roc_auc": 0.9998549036932427,
+      "detection_rate": 0.9996246598478934,
+      "false_positive_rate": 0.001070320025687566,
+      "latency_ms": 0.0340655814999991
+    }
+  ]
+}

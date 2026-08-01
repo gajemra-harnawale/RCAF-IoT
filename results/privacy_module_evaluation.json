@@ -1,0 +1,83 @@
+{
+  "module": "Depth-Silhouette Privacy Protection Module",
+  "sensor": "Microsoft Kinect Xbox 360 Model 1473 (Kinect v1)",
+  "kinect_specs": {
+    "depth_width": 320,
+    "depth_height": 240,
+    "depth_min_mm": 800,
+    "depth_max_mm": 4000,
+    "invalid_value": 0,
+    "person_near_threshold_mm": 1800,
+    "person_far_threshold_mm": 3500,
+    "model": "Xbox 360 Model 1473"
+  },
+  "pipeline_stages": [
+    "Human body segmentation via depth thresholding",
+    "Silhouette morphological erosion (kernel=7x7, iterations=2)",
+    "Calibrated Gaussian noise injection (Gaussian mechanism)",
+    "Invalid pixel preservation"
+  ],
+  "privacy_accuracy_tradeoff": {
+    "0.1": {
+      "n_frames": 50,
+      "mean_psnr_db": 24.246330895258986,
+      "std_psnr_db": 0.07686441206617872,
+      "mean_mse": 60194.257265625,
+      "mean_occupancy_preservation": 0.4491739301396258,
+      "epsilon": 0.1,
+      "mean_processing_latency_ms": 19.776050380023662
+    },
+    "0.5": {
+      "n_frames": 50,
+      "mean_psnr_db": 32.04468706483661,
+      "std_psnr_db": 0.05880967577354324,
+      "mean_mse": 9992.88603515625,
+      "mean_occupancy_preservation": 0.9915926909177892,
+      "epsilon": 0.5,
+      "mean_processing_latency_ms": 18.944575960049406
+    },
+    "1.0": {
+      "n_frames": 50,
+      "mean_psnr_db": 33.345148503846325,
+      "std_psnr_db": 0.04924389295547666,
+      "mean_mse": 7406.842490234375,
+      "mean_occupancy_preservation": 0.9999966627732354,
+      "epsilon": 1.0,
+      "mean_processing_latency_ms": 18.94189637998352
+    },
+    "2.0": {
+      "n_frames": 50,
+      "mean_psnr_db": 33.75246017303267,
+      "std_psnr_db": 0.04297894430730164,
+      "mean_mse": 6743.653271484375,
+      "mean_occupancy_preservation": 1.0,
+      "epsilon": 2.0,
+      "mean_processing_latency_ms": 18.951920160052396
+    },
+    "5.0": {
+      "n_frames": 50,
+      "mean_psnr_db": 33.87115191159935,
+      "std_psnr_db": 0.039805567710198345,
+      "mean_mse": 6561.800595703125,
+      "mean_occupancy_preservation": 1.0,
+      "epsilon": 5.0,
+      "mean_processing_latency_ms": 18.997394960006204
+    },
+    "10.0": {
+      "n_frames": 50,
+      "mean_psnr_db": 33.88962105869021,
+      "std_psnr_db": 0.037820776804440855,
+      "mean_mse": 6533.927958984375,
+      "mean_occupancy_preservation": 1.0,
+      "epsilon": 10.0,
+      "mean_processing_latency_ms": 18.969074939923303
+    }
+  },
+  "privacy_guarantee": "(epsilon, delta)-DP with Gaussian mechanism",
+  "recommended_epsilon": 1.0,
+  "biometric_references": [
+    "Ye et al. (2011): depth silhouette for identification",
+    "Han et al. (2013): Kinect gait recognition via depth",
+    "Dwork & Roth (2014): Gaussian mechanism for DP"
+  ]
+}

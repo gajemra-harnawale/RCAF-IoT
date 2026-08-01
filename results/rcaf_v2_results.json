@@ -1,0 +1,34 @@
+{
+  "model": "RCAF-IoT v2 Hybrid Ensemble",
+  "version": 2,
+  "components": {
+    "random_forest": {
+      "weight": 0.45,
+      "n_estimators": 100
+    },
+    "gradient_boosting": {
+      "weight": 0.45,
+      "n_estimators": 60
+    },
+    "isolation_forest": {
+      "weight": 0.1,
+      "n_estimators": 100
+    }
+  },
+  "evaluation_metrics": {
+    "accuracy": 0.99925,
+    "precision": 0.999062089664228,
+    "recall": 0.999530824809984,
+    "f1_score": 0.9992964022702753,
+    "roc_auc": 0.9998604275368586,
+    "detection_rate": 0.9995308248098902,
+    "false_positive_rate": 0.001070320025687566,
+    "true_positives": 10652,
+    "true_negatives": 9333,
+    "false_positives": 10,
+    "false_negatives": 5,
+    "avg_latency_ms_per_sample": 45.23625036999988
+  },
+  "hardware": "Raspberry Pi 4B ARM Cortex-A72 @ 1.8GHz",
+  "sensor": "Microsoft Kinect Xbox 360 Model 1473"
+}
