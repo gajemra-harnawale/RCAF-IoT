@@ -5,7 +5,6 @@
 ### A Lightweight RGB-Depth Context-Aware Anomaly Fusion Engine
 ### for Resource-Constrained IoT Edge Nodes
 
-[![Status](https://img.shields.io/badge/Status-Under%20Review-orange?style=flat-square)]()
 [![Platform](https://img.shields.io/badge/Platform-Raspberry%20Pi%204-c51a4a?style=flat-square)]()
 [![Sensor](https://img.shields.io/badge/Sensor-Microsoft%20Kinect%20v1-00599C?style=flat-square)]()
 [![Python](https://img.shields.io/badge/Python-3.11-blue?style=flat-square)]()
